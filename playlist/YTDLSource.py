@@ -1,7 +1,10 @@
 import discord
 import asyncio
 import youtube_dl
-import importlib.resources as pkg_resources
+import datetime
+import os
+
+path = os.getenv('APPDATA') + '/Playlist/songs'
 
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
@@ -12,7 +15,7 @@ ffmpeg_options = {
 
 ytdl_format_options = {
     'format': 'bestaudio/best',
-    'outtmpl': 'songs/%(title)s.mp3',
+    'outtmpl': path+'/%(title)s.mp3',
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
@@ -32,15 +35,27 @@ ytdl_format_options = {
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 
+def create_youtube_link(title, source):
+    dura = str(datetime.timedelta(seconds=source.duration))
+    embed = discord.Embed(
+        title=f'{title}{source.title} - ({dura})',
+        url=f'https://www.youtube.com/watch?v={source.id}'
+    )
+    return embed
+
+
 class YTDLSource(discord.PCMVolumeTransformer):
 
-    def __init__(self, source, *, data, volume=0.5):
+    def __init__(self, source, *, data, volume=1):
         super().__init__(source, volume)
 
         self.data = data
 
         self.title = data.get('title')
         self.url = data.get('url')
+        self.duration = data.get('duration')
+        self.id = data.get('id')
+        self.final_file_name = data.get('final_file_name')
 
     @classmethod
     async def from_url(cls, song_info, *, loop=None, stream=False):
@@ -52,5 +67,6 @@ class YTDLSource(discord.PCMVolumeTransformer):
             data = data['entries'][0]
 
         filename = data['url'] if stream else ytdl.prepare_filename(data)
+        data['final_file_name'] = filename
         print(f'Downloaded file {filename}')
         return cls(discord.FFmpegPCMAudio(filename, **ffmpeg_options), data=data)
