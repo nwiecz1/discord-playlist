@@ -1,86 +1,93 @@
 {
-  "michael": [
-    {
-      "url": "https://www.youtube.com/watch?v=IlsvNfrG7Yo",
-      "name": "Eyes of a child",
-      "file": "songs/Michael_McDonald_-_Eyes_of_a_Child.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=dJe1iUuAW4M",
-      "name": "What a Fool Believes",
-      "file": "songs/Doobie_Brothers_~_What_A_fool_Believes_1979_Classic_Rock_R_B_Pop.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=Lvf71gr5yo0",
-      "name": "Love in the World",
-      "file": "songs/Love_in_the_World.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=gXRoYB0FpH0",
-      "name": "Stop Look Listen",
-      "file": "songs/Michael_McDonald_-_Stop_Look_Listen_To_Your_Heart.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=qs9uyeTb4ow",
-      "name": "I Gotta Try",
-      "file": "songs/Michael_McDonald_-_I_Gotta_Try_1982.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=cjqOsYRQI0o",
-      "name": "I Keep Forgettin'",
-      "file": "songs/Michael_McDonald_-_I_Keep_Forgettin.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=SykNSv-1Dks",
-      "name": "Sweet Freedom",
-      "file": "songs/Michael_McDonald_-_Sweet_Freedom_HQ.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=FcyGNSgwdp8",
-      "name": "Ain't No Mountain High Enough",
-      "file": "songs/Ain_t_No_Mountain_High_Enough.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=Gk3dfywQ50I",
-      "name": "You Belong to me",
-      "file": "songs/Michael_McDonald_-_You_Belong_To_Me_-_Lyrics_Below.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=41BfZ7PdnVE",
-      "name": "On My Own",
-      "file": "songs/Patti_Labelle_Michael_McDonald_-_On_My_Own_Lyrics.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=_3rVtcm6pBE",
-      "name": "Ya Mo Be There",
-      "file": "songs/James_Ingram_and_Michael_McDonald_-_Yah_Mo_Be_There.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=2rxWPEdYCnI",
-      "name": "Takin it to the streets",
-      "file": "songs/Takin_It_To_The_Streets_-_The_Doobie_Brothers_1976.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=J7sBoJye_yg",
-      "name": "Heard it through the grapevine",
-      "file": "songs/Michael_Mcdonald-_I_Heard_It_Through_The_Grapevine.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=iaFG6rFZdG4",
-      "name": "Reach Out I'll Be There",
-      "file": "songs/Michael_McDonald_-_Reach_Out_I_ll_Be_There.mp3"
-    }
-  ],
-  "southpark": [
-    {
-      "url": "https://www.youtube.com/watch?v=Jo4XXm8OUP4",
-      "name": "Up there",
-      "file": "songs/Up_There_-_South_Park_-_Bigger_Longer_Uncut_8_9_Movie_CLIP_1999_HD.mp3"
-    },
-    {
-      "url": "https://www.youtube.com/watch?v=sNJmfuEWR8w",
-      "name": "What would Brian Boitano Do?",
-      "file": "songs/What_Would_Brian_Boitano_Do_-_South_Park_-_Bigger_Longer_Uncut_7_9_Movie_CLIP_1999_HD.mp3"
-    }
-  ]
+    "michael": [
+        {
+            "url": "https://www.youtube.com/watch?v=IlsvNfrG7Yo",
+            "name": "Eyes of a child",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_Eyes_of_a_Child.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=dJe1iUuAW4M",
+            "name": "What a Fool Believes",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Doobie_Brothers_~_What_A_fool_Believes_1979_Classic_Rock_R_B_Pop.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=Lvf71gr5yo0",
+            "name": "Love in the World",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Love_in_the_World.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=gXRoYB0FpH0",
+            "name": "Stop Look Listen",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_Stop_Look_Listen_To_Your_Heart.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=qs9uyeTb4ow",
+            "name": "I Gotta Try",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_I_Gotta_Try_1982.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=cjqOsYRQI0o",
+            "name": "I Keep Forgettin'",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_I_Keep_Forgettin.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=SykNSv-1Dks",
+            "name": "Sweet Freedom",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_Sweet_Freedom_HQ.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=FcyGNSgwdp8",
+            "name": "Ain't No Mountain High Enough",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Ain_t_No_Mountain_High_Enough.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=Gk3dfywQ50I",
+            "name": "You Belong to me",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_You_Belong_To_Me_-_Lyrics_Below.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=41BfZ7PdnVE",
+            "name": "On My Own",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Patti_Labelle_Michael_McDonald_-_On_My_Own_Lyrics.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=_3rVtcm6pBE",
+            "name": "Ya Mo Be There",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\James_Ingram_and_Michael_McDonald_-_Yah_Mo_Be_There.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=2rxWPEdYCnI",
+            "name": "Takin it to the streets",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Takin_It_To_The_Streets_-_The_Doobie_Brothers_1976.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=J7sBoJye_yg",
+            "name": "Heard it through the grapevine",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_Mcdonald-_I_Heard_It_Through_The_Grapevine.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=iaFG6rFZdG4",
+            "name": "Reach Out I'll Be There",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Michael_McDonald_-_Reach_Out_I_ll_Be_There.mp3"
+        }
+    ],
+    "southpark": [
+        {
+            "url": "https://www.youtube.com/watch?v=Jo4XXm8OUP4",
+            "name": "Up there",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Up_There_-_South_Park_-_Bigger_Longer_Uncut_8_9_Movie_CLIP_1999_HD.mp3"
+        },
+        {
+            "url": "https://www.youtube.com/watch?v=sNJmfuEWR8w",
+            "name": "What would Brian Boitano Do?",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\What_Would_Brian_Boitano_Do_-_South_Park_-_Bigger_Longer_Uncut_7_9_Movie_CLIP_1999_HD.mp3"
+        }
+    ],
+    "jojo": [
+        {
+            "name": "Pillar Men Theme",
+            "url": "https://www.youtube.com/watch?v=XUhVCoTsBaM",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Jojo_s_Bizarre_Adventure-_Awaken_Pillar_Men_Theme.mp3"
+        }
+    ]
 }
