@@ -8,7 +8,7 @@ from YTDLSource import create_youtube_link
 import os
 
 path = os.getenv('APPDATA') + '/Playlist'
-playlist_file = path+'/playlists.json'
+playlist_file = path + '/playlists.json'
 
 
 class Music(commands.Cog):
@@ -37,6 +37,7 @@ class Music(commands.Cog):
 
     @commands.command()
     async def join(self, ctx, *, channel: discord.VoiceChannel):
+        """Joins the voice channel. """
         if ctx.voice_client is not None:
             return await ctx.voice_client.move_to(channel)
 
@@ -66,7 +67,7 @@ class Music(commands.Cog):
             await ctx.send(f'No such playlist exists with name {playlist_name}. '
                            f'Use $available command to see available or $create to add a new playlist.')
             return
-        pl = self.playlists[playlist_name]
+        pl = self.playlists[playlist_name].copy()
         if any(item['url'] == str(youtube_link).strip() for item in pl):
             await ctx.send(f'Youtube link already exists for this playlist')
             return
@@ -93,17 +94,19 @@ class Music(commands.Cog):
 
     @commands.command()
     async def reload(self, ctx):
-        """ Reloads the playlists """
+        """ Reloads the playlists from the json file. """
         self.load_playlists()
         await ctx.send('Playlist successfully reloaded.')
 
     @commands.command()
     async def play(self, ctx, *, name):
+        """ Plays the playlist in question. """
         if name not in self.playlists or len(self.playlists[name]) == 0:
             await ctx.send(f'No such playlist exists with name {name} or there are no songs in the playlist')
             return
         if len(self.song_list) > 0:
-            await ctx.send(f'Playlist {self.playlist_name} is already active.  Please wait until it is done to queue another')
+            await ctx.send(
+                f'Playlist {self.playlist_name} is already active.  Please wait until it is done to queue another')
             return
 
         await self.start(ctx, name)
@@ -112,7 +115,7 @@ class Music(commands.Cog):
         await ctx.send(f'Now starting playlist {name}')
         self.playlist_name = name
 
-        self.song_list = self.playlists[name]
+        self.song_list = self.playlists[name].copy()
         random.shuffle(self.song_list)
         self.context = ctx
         source = await YTDLSource.from_url(self.song_list[0], loop=self.bot.loop, stream=False)
@@ -149,6 +152,19 @@ class Music(commands.Cog):
         self.context = None
         self.song_list = []
         self.playlist_name = None
+
+    @commands.command()
+    async def skip(self, ctx):
+        """Skips the current song."""
+        if ctx.voice_client is not None and ctx.voice_client.is_playing():
+            ctx.voice_client.stop()
+
+    @commands.Cog.listener()
+    async def on_command_error(self, ctx, error):
+        if isinstance(error, commands.CommandNotFound):
+            print(error)
+        elif isinstance(error, commands.BadArgument):
+            await ctx.send('Command has an invalid argument.  Please view $help for more details.')
 
     @play.before_invoke
     async def ensure_voice(self, ctx):
