@@ -1,5 +1,6 @@
 # discord-playlist
-Connect to a server and plays songs off of a playlist instead of queueing up songs one at a time.  I usually run this directly for intellij...but you can make an executable if you want
+Connect to a server and plays songs off of a playlist instead of queueing up songs one at a time.  
+I usually run this directly for intellij...but you can make an executable if you want.  Not super sophisticated but not meant to be.
 
 $create playlist_name to create a playlist
 
