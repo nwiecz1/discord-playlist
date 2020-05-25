@@ -73,6 +73,16 @@
     ],
     "southpark": [
         {
+            "name": "I've never seen a man eat so many chicken wings",
+            "url": "https://www.youtube.com/watch?v=dmBM8vpRMMQ",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\DVDA_-_What_Would_Brian_Boitano_Do.mp3"
+        },
+        {
+            "name": "Warts on Your Dick",
+            "url": "https://www.youtube.com/watch?v=GM1cx9XXWaE",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\DVDA_-_Warts_on_your_dick.mp3"
+        },
+        {
             "url": "https://www.youtube.com/watch?v=Jo4XXm8OUP4",
             "name": "Up there",
             "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Up_There_-_South_Park_-_Bigger_Longer_Uncut_8_9_Movie_CLIP_1999_HD.mp3"
@@ -81,6 +91,21 @@
             "url": "https://www.youtube.com/watch?v=sNJmfuEWR8w",
             "name": "What would Brian Boitano Do?",
             "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\What_Would_Brian_Boitano_Do_-_South_Park_-_Bigger_Longer_Uncut_7_9_Movie_CLIP_1999_HD.mp3"
+        },
+        {
+            "name": "Gay Fish",
+            "url": "https://www.youtube.com/watch?v=3Vn2xrSG24w",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\South_park_-_gay_fish.mp3"
+        },
+        {
+            "name": "Kyle's Mom's a Bitch",
+            "url": "https://www.youtube.com/watch?v=i9AT3jjAP0Y",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\South_Park_-_Kyle_s_Mom_s_a_Bitch.mp3"
+        },
+        {
+            "name": "Fingerbang",
+            "url": "https://www.youtube.com/watch?v=_xEhr2kbRw4",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\South_Park_-_Fingerbang.mp3"
         }
     ],
     "jojo": [
@@ -88,6 +113,68 @@
             "name": "Pillar Men Theme",
             "url": "https://www.youtube.com/watch?v=XUhVCoTsBaM",
             "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Jojo_s_Bizarre_Adventure-_Awaken_Pillar_Men_Theme.mp3"
+        }
+    ],
+    "tenaciousd": [
+        {
+            "name": "City Hall",
+            "url": "https://www.youtube.com/watch?v=Co2Zt615P5M",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\tenacious_d_-_city_hall.mp3"
+        },
+        {
+            "name": "Daddy Ding Dong",
+            "url": "https://www.youtube.com/watch?v=joRlHeprPpc",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Tenacious_D_-_Post-Apocalypto_-_DADDY_DING_DONG_Lyric_Video.mp3"
+        },
+        {
+            "name": "Wonderboy",
+            "url": "https://www.youtube.com/watch?v=9T2AzYvoPkg",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Wonderboy.mp3"
+        },
+        {
+            "name": "Senorita",
+            "url": "https://www.youtube.com/watch?v=XbmR3oHZ4NM",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Senorita_Explicit.mp3"
+        },
+        {
+            "name": "39",
+            "url": "https://www.youtube.com/watch?v=NRs6blA39VE",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\39_Explicit.mp3"
+        },
+        {
+            "name": "Double Team",
+            "url": "https://www.youtube.com/watch?v=8iqcId_8KVE",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Double_Team.mp3"
+        },
+        {
+            "name": "The Metal",
+            "url": "https://www.youtube.com/watch?v=qR7U1HIhxfA",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\The_Metal_-_Tenacious_D.mp3"
+        },
+        {
+            "name": "Deth Starr",
+            "url": "https://www.youtube.com/watch?v=A02Fc1oQeF0",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Deth_Starr_Explicit.mp3"
+        },
+        {
+            "name": "Roadie",
+            "url": "https://www.youtube.com/watch?v=bEgO5R2PEFA",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Roadie_Explicit.mp3"
+        },
+        {
+            "name": "Rize of the Fenix",
+            "url": "https://www.youtube.com/watch?v=gv18OYELv_c",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Tenacious_D_-_Rise_Of_The_Phoenix_Full_and_complete_version.mp3"
+        },
+        {
+            "name": "To Be The Best",
+            "url": "https://www.youtube.com/watch?v=wytqqfzC5E8",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Tenacious_D_-_To_be_the_best_HQ_lyrics.mp3"
+        },
+        {
+            "name": "Low Hangin Fruit",
+            "url": "https://www.youtube.com/watch?v=-QRZpligDOs",
+            "file": "C:\\Users\\sulli\\AppData\\Roaming\\Playlist\\songs\\Tenacious_D_-_Low_Hangin_Fruit_Video.mp3"
         }
     ]
 }
