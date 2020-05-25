@@ -12,6 +12,9 @@ playlist_file = path + '/playlists.json'
 
 
 class Music(commands.Cog):
+    """
+    Music player.  The main part of the bot.
+    """
 
     def __init__(self, bot):
         self.bot = bot
@@ -23,6 +26,9 @@ class Music(commands.Cog):
         self.load_playlists()
 
     def load_playlists(self):
+        """
+        Loads the playlists.
+        """
         self.playlists = {}
         with open(playlist_file) as json_file:
             self.playlist_data = json.load(json_file)
@@ -31,12 +37,20 @@ class Music(commands.Cog):
                 self.playlists[info] = songs
 
     def write_playlist_update(self):
+        """
+        Writes any updates to the playlist json file.
+        """
         with open(playlist_file, 'w') as out:
             json.dump(self.playlists, out, indent=4)
         print(f'Wrote updates to {playlist_file}')
 
     @commands.command()
     async def join(self, ctx, *, channel: discord.VoiceChannel):
+        """
+        Joins the voice channel
+        :param ctx: Bot context
+        :param channel: Channel to join.
+        """
         """Joins the voice channel. """
         if ctx.voice_client is not None:
             return await ctx.voice_client.move_to(channel)
@@ -45,7 +59,10 @@ class Music(commands.Cog):
 
     @commands.command()
     async def list(self, ctx):
-        """ Lists the current playlist order """
+        """
+        Lists the current playlist order
+        :param ctx: Bot context.
+        """
         if len(self.song_list) > 0:
             output = ""
             for index, song in enumerate(self.song_list, start=1):
@@ -56,13 +73,22 @@ class Music(commands.Cog):
 
     @commands.command()
     async def available(self, ctx):
-        """ Lists the available playlists"""
+        """
+        Lists the available playlists
+        :param ctx: Bot context
+        """
         playlist_txt = '\n'.join(self.playlists.keys())
         await ctx.send(f'Available Playlists: \n{playlist_txt}')
 
     @commands.command()
     async def add(self, ctx, playlist_name, song_name, youtube_link):
-        """ Adds the song to the playlist in question and reloads the playlist"""
+        """
+        Adds the song to the playlist in question and reloads the playlist
+        :param ctx: Bot context
+        :param playlist_name: The name of playlist to add to
+        :param song_name: The name of the song (use quotes).
+        :param youtube_link: The full youtube link.
+        """
         if playlist_name not in self.playlists:
             await ctx.send(f'No such playlist exists with name {playlist_name}. '
                            f'Use $available command to see available or $create to add a new playlist.')
@@ -84,7 +110,11 @@ class Music(commands.Cog):
 
     @commands.command()
     async def create(self, ctx, playlist_name):
-        """ Adds a new playlist """
+        """
+        Creates a new playlist.
+        :param ctx: Bot context.
+        :param playlist_name: The name of the playlist.
+        """
         if playlist_name in self.playlists:
             await ctx.send(f'Playlist with name {playlist_name} already exists.')
             return
@@ -94,13 +124,20 @@ class Music(commands.Cog):
 
     @commands.command()
     async def reload(self, ctx):
-        """ Reloads the playlists from the json file. """
+        """
+        Reloads the playlists from the json file.
+        :param ctx: The bot context.
+        """
         self.load_playlists()
         await ctx.send('Playlist successfully reloaded.')
 
     @commands.command()
     async def play(self, ctx, *, name):
-        """ Plays the playlist in question. """
+        """
+        Plays the playlist in question.
+        :param ctx: The context.
+        :param name: The playlist name.
+        """
         if name not in self.playlists or len(self.playlists[name]) == 0:
             await ctx.send(f'No such playlist exists with name {name} or there are no songs in the playlist')
             return
@@ -112,6 +149,12 @@ class Music(commands.Cog):
         await self.start(ctx, name)
 
     async def start(self, ctx, name):
+        """
+        Starts the playlist.
+        :param ctx: The bot context.
+        :param name: The playlist name.
+        :return:
+        """
         await ctx.send(f'Now starting playlist {name}')
         self.playlist_name = name
 
@@ -124,6 +167,9 @@ class Music(commands.Cog):
         ctx.voice_client.play(source, after=self.after)
 
     async def playit(self):
+        """
+        Plays the playlist song.
+        """
         self.song_list.pop(0)
         if len(self.song_list) > 0:
             source = await YTDLSource.from_url(self.song_list[0], loop=self.bot.loop, stream=False)
@@ -137,6 +183,10 @@ class Music(commands.Cog):
             self.playlist_name = None
 
     def after(self, error):
+        """
+        Callback method after the playlist.
+        :param error: Error if any.
+        """
         try:
             fut = asyncio.run_coroutine_threadsafe(self.playit(), self.bot.loop)
             fut.result()
@@ -145,7 +195,10 @@ class Music(commands.Cog):
 
     @commands.command()
     async def stop(self, ctx):
-        """Stops and disconnects the bot from voice"""
+        """
+        Stops and disconnects the bot from voice
+        :param ctx: The bot context.
+        """
         if ctx.voice_client is not None:
             await ctx.send(f'Bye')
             await ctx.voice_client.disconnect()
@@ -155,12 +208,20 @@ class Music(commands.Cog):
 
     @commands.command()
     async def skip(self, ctx):
-        """Skips the current song."""
+        """
+        Skips the current song.
+        :param ctx: The bot context.
+        """
         if ctx.voice_client is not None and ctx.voice_client.is_playing():
             ctx.voice_client.stop()
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
+        """
+        Occurs on error.
+        :param ctx: The bot context.
+        :param error: The error.
+        """
         if isinstance(error, commands.CommandNotFound):
             print(error)
         elif isinstance(error, commands.BadArgument):
@@ -168,6 +229,10 @@ class Music(commands.Cog):
 
     @play.before_invoke
     async def ensure_voice(self, ctx):
+        """
+        Occurs before a method is called. Makes sure the bot is connected to voice.
+        :param ctx: The bot context.
+        """
         if ctx.voice_client is None:
             if ctx.author.voice:
                 await ctx.author.voice.channel.connect()

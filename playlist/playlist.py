@@ -6,6 +6,9 @@ bot = commands.Bot(command_prefix=commands.when_mentioned_or('$'), description='
 
 @bot.event
 async def on_ready():
+    """
+    Called when the bot starts.
+    """
     print(f'Logged in as {bot.user.name} with id {bot.user.id}')
 
 bot.add_cog(Music(bot))

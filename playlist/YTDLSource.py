@@ -36,6 +36,12 @@ ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
 
 
 def create_youtube_link(title, source):
+    """
+    Creates the youtube link to display as an embeded discord message.
+    :param title: The pre-title text.
+    :param source: The source (generally a copy of the YTDLSource).
+    :return: The embed message.
+    """
     dura = str(datetime.timedelta(seconds=source.duration))
     embed = discord.Embed(
         title=f'{title}{source.title} - ({dura})',
@@ -59,6 +65,13 @@ class YTDLSource(discord.PCMVolumeTransformer):
 
     @classmethod
     async def from_url(cls, song_info, *, loop=None, stream=False):
+        """
+        Downloads/Streams a video from a youtube url.
+        :param song_info: The song info (url, title).
+        :param loop: The loop.
+        :param stream: Whether or not to steam the youtube link.
+        :return: The YTDLSource.
+        """
         loop = loop or asyncio.get_event_loop()
         data = await loop.run_in_executor(None, lambda: ytdl.extract_info(song_info['url'], download=not stream))
 
