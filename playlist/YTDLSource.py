@@ -50,6 +50,11 @@ def create_youtube_link(title, source):
     return embed
 
 
+def handle_exception(self, loop, context):
+    msg = context.get("exception", context["message"])
+    print(f'Error in loop.  Reason: {msg}')
+
+
 class YTDLSource(discord.PCMVolumeTransformer):
 
     def __init__(self, source, *, data, volume=1):
@@ -63,6 +68,8 @@ class YTDLSource(discord.PCMVolumeTransformer):
         self.id = data.get('id')
         self.final_file_name = data.get('final_file_name')
 
+
+
     @classmethod
     async def from_url(cls, song_info, *, loop=None, stream=False):
         """
@@ -73,6 +80,7 @@ class YTDLSource(discord.PCMVolumeTransformer):
         :return: The YTDLSource.
         """
         loop = loop or asyncio.get_event_loop()
+        loop.set_exception_handler(handle_exception)
         data = await loop.run_in_executor(None, lambda: ytdl.extract_info(song_info['url'], download=not stream))
 
         if 'entries' in data:

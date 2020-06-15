@@ -1,7 +1,7 @@
 from discord.ext import commands
 from Music import Music
 
-bot = commands.Bot(command_prefix=commands.when_mentioned_or('$'), description='Lets you set and play playlists from youtube')
+bot = commands.Bot(command_prefix=commands.when_mentioned_or('$'), case_insensitive=True, description='Lets you set and play playlists from youtube')
 
 
 @bot.event
